@@ -1,0 +1,10 @@
+D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Debug\katalogenLibrary_v4.0.vbproj.GenerateResource.Cache
+D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\katalogenLibrary_v4_0.dll.config
+D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\katalogenLibrary_v4_0.dll
+D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\katalogenLibrary_v4_0.pdb
+D:\devprojekt\api\barnensbibl_Api_v3.0\barnensbibl_Api_v3.0\bin\katalogenLibrary_v4_0.xml
+D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Debug\katalogenLibrary_v4_0.Resources.resources
+D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Debug\katalogenLibrary_v4_0.dll
+D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Debug\katalogenLibrary_v4_0.xml
+D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Debug\katalogenLibrary_v4_0.pdb
+D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Debug\katalogenLibrary_v4.0.vbprojResolveAssemblyReference.cache

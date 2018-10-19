@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="katalogenLibraryLINQ">
+  <DataContextMoniker Name="/katalogenLibraryLINQDataContext" />
+  <nestedChildShapes>
+    <classShape Id="afe53e65-0780-4d7b-97f4-a5de02b41893" absoluteBounds="0.625, 0.5, 2, 6.5784326171875">
+      <DataClassMoniker Name="/katalogenLibraryLINQDataContext/tblAjKatalogBook" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d7b2604-92d2-4c39-8002-bd4ee42791ee" absoluteBounds="0.64000000000000012, 0.96, 1.9700000000000002, 6.0184326171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
