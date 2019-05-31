@@ -2,10 +2,22 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="katalogenLibraryLINQ">
   <DataContextMoniker Name="/katalogenLibraryLINQDataContext" />
   <nestedChildShapes>
-    <classShape Id="afe53e65-0780-4d7b-97f4-a5de02b41893" absoluteBounds="0.625, 0.5, 2, 6.5784326171875">
+    <classShape Id="afe53e65-0780-4d7b-97f4-a5de02b41893" absoluteBounds="0.75, 0.5, 2, 6.5784326171875">
       <DataClassMoniker Name="/katalogenLibraryLINQDataContext/tblAjKatalogBook" />
       <nestedChildShapes>
-        <elementListCompartment Id="8d7b2604-92d2-4c39-8002-bd4ee42791ee" absoluteBounds="0.64000000000000012, 0.96, 1.9700000000000002, 6.0184326171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8d7b2604-92d2-4c39-8002-bd4ee42791ee" absoluteBounds="0.76500000000000012, 0.96, 1.9700000000000002, 6.0184326171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="98dc63d8-6e84-4026-b5ea-71cab9a23c4c" absoluteBounds="3.5, 0.5, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/katalogenLibraryLINQDataContext/tblAjKatalogReviewUrvalsgrupp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="64c309e5-c9c9-41f6-969d-dd061e4e4f98" absoluteBounds="3.5149999999999997, 0.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ffdf4fa-21bb-45ae-9e58-88c491dcbb83" absoluteBounds="3.5, 4.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/katalogenLibraryLINQDataContext/tbl_aj_SearchLogkatalogen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d5832010-6928-448f-99ef-9388ed3efb48" absoluteBounds="3.5149999999999997, 4.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

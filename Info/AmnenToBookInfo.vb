@@ -1,4 +1,4 @@
-﻿Public Class AmnenToTookInfo
+﻿Public Class AmnenToBookInfo
     ' local property declarations
     Private _bookid As Integer
     Private _amnesord As String
@@ -6,6 +6,9 @@
 
     ' initialization
     Public Sub New()
+        _bookid = 0
+        _amnesord = ""
+        _AmnesordID = 0
     End Sub
 
     Public Sub New(ByVal bookID As Integer)

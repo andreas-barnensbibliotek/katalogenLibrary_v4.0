@@ -9,20 +9,38 @@
     Private _forlag As String
     Private _categories As List(Of bookCategoryInfo)
     Private _extracategories As List(Of bookCategoryInfo)
-    Private _amnen As List(Of AmnenToTookInfo)
+    Private _amnen As List(Of AmnenToBookInfo)
     Private _Serie As String
     Private _Serienr As String
     Private _Subtitle As String
     Private _Easyread As Integer
-    Private _TotVotes As Integer
     Private _Review As String
     Private _bokomslagURL As String
     Private _status As Integer
     Private _mediaUrler As List(Of mediaUrlInfo)
 
+
     ' initialization
     Public Sub New()
-
+        _bookID = 0
+        _title = ""
+        _isbn = ""
+        _forfattare = New List(Of forfattardetailInfo)
+        _illustrators = New List(Of forfattardetailInfo)
+        _Published = ""
+        _forlag = ""
+        _categories = New List(Of bookCategoryInfo)
+        _extracategories = New List(Of bookCategoryInfo)
+        _amnen = New List(Of AmnenToBookInfo)
+        _Serie = ""
+        _Serienr = ""
+        _Subtitle = ""
+        _Easyread = 0
+        _Review = ""
+        _bokomslagURL = ""
+        _status = 0
+        _mediaUrler = New List(Of mediaUrlInfo)
+        _booklists = New List(Of userBookListInfo)
     End Sub
 
     ' public properties
@@ -98,7 +116,7 @@
         End Set
     End Property
 
-    Public Property ExtraCategorier() As List(Of bookCategoryInfo)
+    Public Property MediatypCategories() As List(Of bookCategoryInfo)
         Get
             Return _extracategories
         End Get
@@ -107,11 +125,11 @@
         End Set
     End Property
 
-    Public Property Amnen() As List(Of AmnenToTookInfo)
+    Public Property Amnen() As List(Of AmnenToBookInfo)
         Get
             Return _amnen
         End Get
-        Set(ByVal value As List(Of AmnenToTookInfo))
+        Set(ByVal value As List(Of AmnenToBookInfo))
             _amnen = value
         End Set
     End Property
@@ -152,15 +170,6 @@
         End Set
     End Property
 
-    Public Property TotVotes() As Integer
-        Get
-            Return _TotVotes
-        End Get
-        Set(ByVal Value As Integer)
-            _TotVotes = Value
-        End Set
-    End Property
-
     Public Property BookReview() As String
         Get
             Return _Review
@@ -178,16 +187,15 @@
             _bokomslagURL = Value
         End Set
     End Property
-
-    Public Property MediaUrler() As List(Of mediaUrlInfo)
+    Private _booklists As List(Of userBookListInfo)
+    Public Property Booklists() As List(Of userBookListInfo)
         Get
-            Return _mediaUrler
+            Return _booklists
         End Get
-        Set(ByVal value As List(Of mediaUrlInfo))
-            _mediaUrler = value
+        Set(ByVal value As List(Of userBookListInfo))
+            _booklists = value
         End Set
     End Property
-
 
     ' public properties
     Public Property status() As Integer

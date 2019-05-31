@@ -7,3 +7,9 @@ D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Release\katalogenLibrary_v4.0.
 D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Release\katalogenLibrary_v4_0.dll
 D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Release\katalogenLibrary_v4_0.xml
 D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Release\katalogenLibrary_v4_0.pdb
+d:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Release\katalogenLibrary_v4.0.vbproj.CoreCompileInputs.cache
+D:\devprojekt\libraries\katalogenLibrary_v4.0\bin\Release\barnenskrypinIMGHandler.dll
+D:\devprojekt\libraries\katalogenLibrary_v4.0\bin\Release\barnenskrypinIMGHandler.pdb
+D:\devprojekt\libraries\katalogenLibrary_v4.0\bin\Release\barnenskrypinIMGHandler.xml
+D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Release\katalogenLibrary_v4.0.vbproj.CopyComplete
+D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Release\katalogenLibrary_v4.0.vbprojAssemblyReference.cache

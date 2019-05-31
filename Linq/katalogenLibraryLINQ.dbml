@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AJDNNDatabase_v5" Class="katalogenLibraryLINQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=AJDNNDatabase_v5;User ID=forfAdmin2" SettingsObjectName="katalogenLibrary_v4_0.My.MySettings" SettingsPropertyName="AJDNNDatabase_v5ConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=AJDNNDatabase_v5;User ID=forfAdmin4" SettingsObjectName="katalogenLibrary_v4_0.My.MySettings" SettingsPropertyName="AJDNNDatabase_v5ConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.tblAjKatalogBooks" Member="tblAjKatalogBooks">
-    <Type Name="tblAjKatalogBook">
+    <Type Name="tblAjKatalogBook" Id="ID1">
       <Column Name="bookID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="ModuleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Version" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
@@ -34,4 +34,124 @@
       <Column Name="SSMA_TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
     </Type>
   </Table>
+  <Table Name="dbo.tblAjKatalogReviewUrvalsgrupp" Member="tblAjKatalogReviewUrvalsgrupps">
+    <Type Name="tblAjKatalogReviewUrvalsgrupp">
+      <Column Name="ReviewID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Bookid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Review" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Inserted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Changed" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="valjare" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="granskare" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="godkannare" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Opinion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SSMA_TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_aj_SearchLogkatalogen" Member="tbl_aj_SearchLogkatalogens">
+    <Type Name="tbl_aj_SearchLogkatalogen">
+      <Column Name="SearchWordID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Search" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Datum" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="typ" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="millisecond" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.AJKat_GetAmnenToBook" Method="AJKat_GetAmnenToBook">
+    <Parameter Name="bookid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="AJKat_GetAmnenToBookResult">
+      <Column Name="BookID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AmnesordID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amnesord" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AJKat_getAllBooksCatbyBookid" Method="AJKat_getAllBooksCatbyBookid">
+    <Parameter Name="bookid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="AJKat_getAllBooksCatbyBookidResult">
+      <Column Name="bookID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="categoryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AJKat_GetForfattareToBook" Method="AJKat_GetForfattareToBook">
+    <Parameter Name="bookid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="rolltyp" Type="System.Int32" DbType="Int" />
+    <ElementType Name="AJKat_GetForfattareToBookResult">
+      <Column Name="BookID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Namn" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="CreatorRollID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatorID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AjKat_GetBooksFromForfattare" Method="AjKat_GetBooksFromForfattare">
+    <Parameter Name="forfattarnamn" Type="System.String" DbType="NVarChar(70)" />
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="dbo.AjKat_getBookByTitle" Method="AjKat_getBookByTitle">
+    <Parameter Name="search" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="AjKat_getBookByTitleResult">
+      <Column Name="bookID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModuleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Version" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="isbn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PublisherID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Inserted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Changed" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Subtitle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Serie" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Serienr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Pages" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Language" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Information" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Synopsis" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Published" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="presentation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="presentationlink" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ebooklink" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="newcopy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="inserter" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Lektor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotVotes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Bokjuryn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Easyread" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SSMA_TimeStamp" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ajkat_GetBookImgFromAJBarnboksKatalog" Method="ajkat_GetBookImgFromAJBarnboksKatalog">
+    <Parameter Name="catid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ajkat_GetBookImgFromAJBarnboksKatalogResult">
+      <Column Name="bookID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="isbn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Published" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Bokjuryn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Serie" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Serienr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Subtitle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Easyread" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ajkat_GetBookImgFromAJBarnboksKatalog_byAmne" Method="ajkat_GetBookImgFromAJBarnboksKatalog_byAmne">
+    <Parameter Name="amnid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ajkat_GetBookImgFromAJBarnboksKatalog_byAmneResult">
+      <Column Name="bookID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="isbn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Published" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Bokjuryn" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Easyread" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Serie" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Serienr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Subtitle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

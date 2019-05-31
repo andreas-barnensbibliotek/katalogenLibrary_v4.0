@@ -7,6 +7,10 @@
 
     ' initialization
     Public Sub New()
+        _bookid = 0
+        _namn = ""
+        _CreatorRollid = 0
+        _creatorid = 0
     End Sub
     Public Sub New(ByVal bookID As Integer)
         Me.bookid = bookID

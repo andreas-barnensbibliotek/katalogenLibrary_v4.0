@@ -9,6 +9,13 @@ Public Class mediaUrlInfo
         HtmlUrl = 5
     End Enum
 
+    Public Sub New()
+        _mediaTyp = 0
+        _mediaDescription = ""
+        _mediaurl = ""
+
+    End Sub
+
     Private _mediaTyp As String
     Public Property MediaTyp() As Integer
         Get

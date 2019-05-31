@@ -43,6 +43,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="barnenskrypinIMGHandler, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\barnenskrypinBundle\barnenskrypinIMGHandler\bin\Release\barnenskrypinIMGHandler.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
@@ -66,18 +70,24 @@
   <ItemGroup>
     <Compile Include="controller\autocompleteController.vb" />
     <Compile Include="controller\connectionstringHandler.vb" />
+    <Compile Include="controller\SearchController.vb" />
+    <Compile Include="DAL\ExtendedDAL.vb" />
     <Compile Include="DAL\KatalogeSearchDAL.vb" />
-    <Compile Include="Info\AmnenToTookInfo.vb" />
+    <Compile Include="Info\AmnenToBookInfo.vb" />
+    <Compile Include="Info\autocompleteInfo.vb" />
     <Compile Include="Info\bookCategoryInfo.vb" />
     <Compile Include="Info\bookdetailbaseInfo.vb" />
+    <Compile Include="Info\userBookListInfo.vb" />
+    <Compile Include="Info\categoryAndMediatypes.vb" />
     <Compile Include="Info\forfattardetailInfo.vb" />
+    <Compile Include="Info\mainSearchResultInfo.vb" />
     <Compile Include="Info\mediaurlInfo.vb" />
     <Compile Include="Info\ShortBookInfo.vb" />
     <Compile Include="katalogenLibraryMainController.vb" />
     <Compile Include="Linq\katalogenLibraryLINQ.designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>katalogenLibraryLINQ.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -96,9 +106,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="Linq\katalogenLibraryLINQ.dbml.layout">
-      <DependentUpon>katalogenLibraryLINQ.dbml</DependentUpon>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
     </None>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -109,9 +118,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Linq\katalogenLibraryLINQ.dbml">
+      <SubType>Designer</SubType>
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>katalogenLibraryLINQ.designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
+    </None>
+    <None Include="Linq\katalogenLibraryLINQ.dbml.layout">
+      <DependentUpon>katalogenLibraryLINQ.dbml</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

@@ -5,9 +5,15 @@ D:\devprojekt\libraries\katalogenLibrary_v4.0\katalogenLibrary_v4.0_TEST\bin\Rel
 D:\devprojekt\libraries\katalogenLibrary_v4.0\katalogenLibrary_v4.0_TEST\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 D:\devprojekt\libraries\katalogenLibrary_v4.0\katalogenLibrary_v4.0_TEST\bin\Release\katalogenLibrary_v4_0.pdb
 D:\devprojekt\libraries\katalogenLibrary_v4.0\katalogenLibrary_v4.0_TEST\bin\Release\katalogenLibrary_v4_0.xml
-D:\devprojekt\libraries\katalogenLibrary_v4.0\katalogenLibrary_v4.0_TEST\obj\Release\katalogenLibrary_v4.0_TEST.vbprojResolveAssemblyReference.cache
 D:\devprojekt\libraries\katalogenLibrary_v4.0\katalogenLibrary_v4.0_TEST\obj\Release\katalogenLibrary_v4_0_TEST.Resources.resources
 D:\devprojekt\libraries\katalogenLibrary_v4.0\katalogenLibrary_v4.0_TEST\obj\Release\katalogenLibrary_v4.0_TEST.vbproj.GenerateResource.Cache
 D:\devprojekt\libraries\katalogenLibrary_v4.0\katalogenLibrary_v4.0_TEST\obj\Release\katalogenLibrary_v4_0_TEST.dll
 D:\devprojekt\libraries\katalogenLibrary_v4.0\katalogenLibrary_v4.0_TEST\obj\Release\katalogenLibrary_v4_0_TEST.xml
 D:\devprojekt\libraries\katalogenLibrary_v4.0\katalogenLibrary_v4.0_TEST\obj\Release\katalogenLibrary_v4_0_TEST.pdb
+d:\devprojekt\libraries\katalogenLibrary_v4.0\katalogenLibrary_v4.0_TEST\bin\Release\katalogenLibrary_v4_0.dll.config
+d:\devprojekt\libraries\katalogenLibrary_v4.0\katalogenLibrary_v4.0_TEST\obj\Release\katalogenLibrary_v4.0_TEST.vbprojAssemblyReference.cache
+d:\devprojekt\libraries\katalogenLibrary_v4.0\katalogenLibrary_v4.0_TEST\obj\Release\katalogenLibrary_v4.0_TEST.vbproj.CoreCompileInputs.cache
+d:\devprojekt\libraries\katalogenLibrary_v4.0\katalogenLibrary_v4.0_TEST\obj\Release\katalogenLibrary_v4.0_TEST.vbproj.CopyComplete
+D:\devprojekt\libraries\katalogenLibrary_v4.0\katalogenLibrary_v4.0_TEST\bin\Release\barnenskrypinIMGHandler.dll
+D:\devprojekt\libraries\katalogenLibrary_v4.0\katalogenLibrary_v4.0_TEST\bin\Release\barnenskrypinIMGHandler.pdb
+D:\devprojekt\libraries\katalogenLibrary_v4.0\katalogenLibrary_v4.0_TEST\bin\Release\barnenskrypinIMGHandler.xml
