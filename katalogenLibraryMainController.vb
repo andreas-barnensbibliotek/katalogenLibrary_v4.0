@@ -2,7 +2,6 @@
     Public Function autocompleteBookinfoList(searchstr As String, Optional maxantal As Integer = 10) As autocompleteInfo
         Dim ret As New autocompleteInfo
         Dim obj As New autocompleteController
-
         Return obj.autocompletebyTitle(searchstr, maxantal)
     End Function
 
@@ -46,6 +45,21 @@
 
         Catch ex As Exception
             ret.Status = "Error Fel i sökningnen på Ämne: " & amnid
+        End Try
+        Return ret
+
+    End Function
+
+    Public Function mainBookDetailList(bookid As Integer) As mainSearchResultInfo
+        Dim ret As New mainSearchResultInfo
+        Dim obj As New DetailController
+        Try
+            ret.Bookitems = obj.getbookdetailbyBookid(bookid)
+            ret.Antal = ret.Bookitems.Count
+            ret.Status = "Bokdetalj med bookid: " & bookid & " är hämtad!"
+
+        Catch ex As Exception
+            ret.Status = "Error Fel vid hämtning av bokdetalj med bookid: " & bookid
         End Try
         Return ret
 

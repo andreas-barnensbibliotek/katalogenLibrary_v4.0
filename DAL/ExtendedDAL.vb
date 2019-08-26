@@ -10,10 +10,10 @@ Public Class ExtendedDAL
 
 #Region "Författare"
 
-    Public Function getForfattarlistByBookid(bookid) As List(Of forfattardetailInfo)
+    Public Function getForfattarlistByBookid(bookid As Integer, Optional typ As Integer = 1) As List(Of forfattardetailInfo)
         Dim ret As New List(Of forfattardetailInfo)
 
-        Dim forfObj = From i In _linqObj.AJKat_GetForfattareToBook(bookid, 1)
+        Dim forfObj = From i In _linqObj.AJKat_GetForfattareToBook(bookid, typ)
 
         For Each itm In forfObj
             Dim forf As New forfattardetailInfo
@@ -33,7 +33,7 @@ Public Class ExtendedDAL
 
 #Region "Kategori"
 
-    Public Function getKategorilistByBookid(bookid) As categoryAndMediatypes
+    Public Function getKategorilistByBookid(bookid As Integer) As categoryAndMediatypes
         Dim rettypobj As New categoryAndMediatypes
 
         Dim catObj = From i In _linqObj.AJKat_getAllBooksCatbyBookid(bookid)
@@ -63,11 +63,27 @@ Public Class ExtendedDAL
 
     End Function
 
+    Public Function getCategoryListByBookid(bookid As Integer) As List(Of bookCategoryInfo)
+        Dim rettypobj As New List(Of bookCategoryInfo)
+        Dim catObj = From i In _linqObj.AJKat_getAllBooksCatbyBookid(bookid)
+
+        For Each itm In catObj
+            Dim cat As New bookCategoryInfo
+            cat.CategoryID = itm.CategoryID
+            cat.catnamn = itm.categoryName
+            cat.bookid = itm.bookID
+            rettypobj.Add(cat)
+
+        Next
+
+        Return rettypobj
+
+    End Function
 #End Region
 
 #Region "Ämnen"
 
-    Public Function getAmnenlistByBookid(bookid) As List(Of AmnenToBookInfo)
+    Public Function getAmnenlistByBookid(bookid As Integer) As List(Of AmnenToBookInfo)
         Dim ret As New List(Of AmnenToBookInfo)
 
         Dim amnObj = From i In _linqObj.AJKat_GetAmnenToBook(bookid)

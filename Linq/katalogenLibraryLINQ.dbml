@@ -154,4 +154,20 @@
       <Column Name="Subtitle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.AjKatalog_GetBookDetailbyID" Method="AjKatalog_GetBookDetailbyID">
+    <Parameter Name="bookid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="AjKatalog_GetBookDetailbyIDResult">
+      <Column Name="bookID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="isbn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Subtitle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Serie" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Serienr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="presentation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Published" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Easyread" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="forlag" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Review" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

@@ -81,7 +81,7 @@ Public Class SearchController
     End Function
 
 
-    Private Function extendResultlist(listobj As List(Of bookdetailbaseInfo)) As List(Of bookdetailbaseInfo)
+    Public Function extendResultlist(listobj As List(Of bookdetailbaseInfo)) As List(Of bookdetailbaseInfo)
         Dim retobj As New List(Of bookdetailbaseInfo)
         Dim imgobj As New checkImgExist
 
@@ -96,7 +96,7 @@ Public Class SearchController
 
             ' Run test finished: 1 run (0:00:02,9117882) ==========kalle
             itm.Forfattare = _extDalObj.getForfattarlistByBookid(itm.Bookid)
-
+            'itm.Illustrator = _extDalObj.getForfattarlistByBookid(itm.Bookid, 2)
             ' Run test finished: 1 run (0:00:03,1262559) ==========kalle
             itm.Amnen = _extDalObj.getAmnenlistByBookid(itm.Bookid)
 

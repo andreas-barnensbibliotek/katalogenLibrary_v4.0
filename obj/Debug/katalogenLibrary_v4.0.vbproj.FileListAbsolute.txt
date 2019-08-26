@@ -7,6 +7,5 @@ D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Debug\katalogenLibrary_v4_0.Re
 D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Debug\katalogenLibrary_v4_0.dll
 D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Debug\katalogenLibrary_v4_0.xml
 D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Debug\katalogenLibrary_v4_0.pdb
-D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Debug\katalogenLibrary_v4.0.vbprojAssemblyReference.cache
 D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Debug\katalogenLibrary_v4.0.vbproj.CoreCompileInputs.cache
 D:\devprojekt\libraries\katalogenLibrary_v4.0\obj\Debug\katalogenLibrary_v4.0.vbproj.CopyComplete

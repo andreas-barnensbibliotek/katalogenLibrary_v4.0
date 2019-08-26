@@ -113,6 +113,8 @@ Public Class KatalogeSearchDAL
 
     End Function
 
+
+
 #End Region
 
     Private Function createFullReturnList(bookObj As Object) As List(Of bookdetailbaseInfo)

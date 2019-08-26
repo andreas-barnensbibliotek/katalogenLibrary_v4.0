@@ -135,6 +135,12 @@ Partial Public Class katalogenLibraryLINQDataContext
 		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), amnid)
 		Return CType(result.ReturnValue,ISingleResult(Of ajkat_GetBookImgFromAJBarnboksKatalog_byAmneResult))
 	End Function
+	
+	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.AjKatalog_GetBookDetailbyID")>  _
+	Public Function AjKatalog_GetBookDetailbyID(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal bookid As System.Nullable(Of Integer)) As ISingleResult(Of AjKatalog_GetBookDetailbyIDResult)
+		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), bookid)
+		Return CType(result.ReturnValue,ISingleResult(Of AjKatalog_GetBookDetailbyIDResult))
+	End Function
 End Class
 
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.tblAjKatalogBooks")>  _
@@ -2181,6 +2187,168 @@ Partial Public Class ajkat_GetBookImgFromAJBarnboksKatalog_byAmneResult
 		Set
 			If (String.Equals(Me._Subtitle, value) = false) Then
 				Me._Subtitle = value
+			End If
+		End Set
+	End Property
+End Class
+
+Partial Public Class AjKatalog_GetBookDetailbyIDResult
+	
+	Private _bookID As Integer
+	
+	Private _isbn As String
+	
+	Private _Title As String
+	
+	Private _Subtitle As String
+	
+	Private _Serie As String
+	
+	Private _Serienr As String
+	
+	Private _presentation As String
+	
+	Private _Published As String
+	
+	Private _Easyread As System.Nullable(Of Integer)
+	
+	Private _forlag As String
+	
+	Private _Review As String
+	
+	Public Sub New()
+		MyBase.New
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_bookID", DbType:="Int NOT NULL")>  _
+	Public Property bookID() As Integer
+		Get
+			Return Me._bookID
+		End Get
+		Set
+			If ((Me._bookID = value)  _
+						= false) Then
+				Me._bookID = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_isbn", DbType:="NVarChar(255)")>  _
+	Public Property isbn() As String
+		Get
+			Return Me._isbn
+		End Get
+		Set
+			If (String.Equals(Me._isbn, value) = false) Then
+				Me._isbn = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Title", DbType:="NVarChar(255)")>  _
+	Public Property Title() As String
+		Get
+			Return Me._Title
+		End Get
+		Set
+			If (String.Equals(Me._Title, value) = false) Then
+				Me._Title = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Subtitle", DbType:="NVarChar(255)")>  _
+	Public Property Subtitle() As String
+		Get
+			Return Me._Subtitle
+		End Get
+		Set
+			If (String.Equals(Me._Subtitle, value) = false) Then
+				Me._Subtitle = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Serie", DbType:="NVarChar(255)")>  _
+	Public Property Serie() As String
+		Get
+			Return Me._Serie
+		End Get
+		Set
+			If (String.Equals(Me._Serie, value) = false) Then
+				Me._Serie = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Serienr", DbType:="NVarChar(255)")>  _
+	Public Property Serienr() As String
+		Get
+			Return Me._Serienr
+		End Get
+		Set
+			If (String.Equals(Me._Serienr, value) = false) Then
+				Me._Serienr = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_presentation", DbType:="NVarChar(MAX)")>  _
+	Public Property presentation() As String
+		Get
+			Return Me._presentation
+		End Get
+		Set
+			If (String.Equals(Me._presentation, value) = false) Then
+				Me._presentation = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Published", DbType:="NVarChar(50)")>  _
+	Public Property Published() As String
+		Get
+			Return Me._Published
+		End Get
+		Set
+			If (String.Equals(Me._Published, value) = false) Then
+				Me._Published = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Easyread", DbType:="Int")>  _
+	Public Property Easyread() As System.Nullable(Of Integer)
+		Get
+			Return Me._Easyread
+		End Get
+		Set
+			If (Me._Easyread.Equals(value) = false) Then
+				Me._Easyread = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_forlag", DbType:="NVarChar(100)")>  _
+	Public Property forlag() As String
+		Get
+			Return Me._forlag
+		End Get
+		Set
+			If (String.Equals(Me._forlag, value) = false) Then
+				Me._forlag = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Review", DbType:="NVarChar(1000)")>  _
+	Public Property Review() As String
+		Get
+			Return Me._Review
+		End Get
+		Set
+			If (String.Equals(Me._Review, value) = false) Then
+				Me._Review = value
 			End If
 		End Set
 	End Property

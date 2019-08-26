@@ -45,4 +45,15 @@ Imports katalogenLibrary_v4_0
         Dim testar = ret.Antal
 
     End Sub
+
+    <TestMethod()> Public Sub MainBookdetail()
+        Dim bookid As Integer = 5666 ' 6223
+        Dim obj As New katalogenLibraryMainController
+
+        Dim ret As New mainSearchResultInfo
+        ret = obj.mainBookDetailList(bookid)
+
+        Dim testar = ret.Antal
+
+    End Sub
 End Class

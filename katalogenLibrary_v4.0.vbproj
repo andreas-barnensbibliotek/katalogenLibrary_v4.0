@@ -70,7 +70,9 @@
   <ItemGroup>
     <Compile Include="controller\autocompleteController.vb" />
     <Compile Include="controller\connectionstringHandler.vb" />
+    <Compile Include="controller\DetailController.vb" />
     <Compile Include="controller\SearchController.vb" />
+    <Compile Include="DAL\bookdetailDAL.vb" />
     <Compile Include="DAL\ExtendedDAL.vb" />
     <Compile Include="DAL\KatalogeSearchDAL.vb" />
     <Compile Include="Info\AmnenToBookInfo.vb" />
